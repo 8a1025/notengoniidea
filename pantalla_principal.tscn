@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cxfuft45mvipt"]
+
+[ext_resource type="PackedScene" uid="uid://d0u3otmw0ll0" path="res://player.tscn" id="1_o6cav"]
+[ext_resource type="Texture2D" uid="uid://btjts18drsywr" path="res://assets/pixil-frame-0.png" id="2_poj3a"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_udnhx"]
+texture = ExtResource("2_poj3a")
+
+[sub_resource type="TileSet" id="TileSet_o6cav"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_udnhx")
+
+[node name="Pantalla principal" type="Node2D" unique_id=819852502]
+
+[node name="player" parent="." unique_id=419063781 instance=ExtResource("1_o6cav")]
+position = Vector2(163, 182)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=693672030]
+tile_set = SubResource("TileSet_o6cav")
+format = 2
